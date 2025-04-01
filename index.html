@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오노추🎶 </title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+    <p id="message">  🎶 오늘의 플리 추천은? 🎶 </p>
+    <button onclick="showRandomMessage()">눌러서 확인하기</button>
+
+    <script>
+        function showRandomMessage() {
+            const messages = [
+                "https://youtu.be/5DC_1z-OGHo?si=f9lYVQAGqzNguaiS",
+                "https://youtu.be/YFkyI6wjr_A?si=8888bFu7_bVhKklh",
+                "https://youtu.be/OsA3iPO2fEg?si=_FqYzl0qVHYG6SOo",
+                "https://youtu.be/f1WuPpDA5fo?si=-Pf24c1jhFkeXb6c",
+                "https://youtu.be/WnrIX9Ak1wA?si=hJCC5qX-0E7B05sX",
+                "https://youtu.be/FhpEn4qkeMY?si=Qq457NlaqLwQ6B1s",
+                "https://youtu.be/CC78fJ9IBuU?si=LTTksLfALf1BhlbP"
+            ];
+            document.getElementById("message").innerText = messages[Math.floor(Math.random() * messages.length)];
+        }
+    </script>
+</body>
+</html>
