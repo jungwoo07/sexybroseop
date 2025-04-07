@@ -3,42 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>오노추🎶 </title>
+    <title>오노추🎶</title>
     <style>
         body {
             text-align: center;
             font-size: 2rem;
             margin-top: 20%;
         }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #0077cc;
+        }
     </style>
 </head>
 <body>
-    <p id="message">  🎶 오늘의 플리 추천은? 🎶 </p>
+    <p id="message">🎶 오늘의 플리 추천은? 🎶</p>
     <button onclick="showRandomMessage()">눌러서 확인하기</button>
 
     <script>
         function showRandomMessage() {
             const messages = [
-                
-                <a"https://youtu.be/5DC_1z-OGHo?si=f9lYVQAGqzNguaiS">,
-                <a href="https://youtu.be/YFkyI6wjr_A?si=8888bFu7_bVhKklh">,
-                <a href="https://youtu.be/OsA3iPO2fEg?si=_FqYzl0qVHYG6SOo">,
-                <a href="https://youtu.be/f1WuPpDA5fo?si=-Pf24c1jhFkeXb6c">,
-                <a href="https://youtu.be/WnrIX9Ak1wA?si=hJCC5qX-0E7B05sX">,
-                <a href="https://youtu.be/FhpEn4qkeMY?si=Qq457NlaqLwQ6B1s">,
-                <a href="https://youtu.be/CC78fJ9IBuU?si=LTTksLfALf1BhlbP">,
-                <a href="https://youtube.com/watch?v=pMDah67RpsQ&si=KIqu_VFpMmmG1t4Y">,
-                <a href="https://youtube.com/watch?v=Qx8Stqr9XZM&si=E4WrfoYP9P-DZVkX">,
-                <a href="https://youtube.com/watch?v=jyPb2zLiPyo&si=6TyCuT5nM_0ai7fW">,
-                <a href="https://youtube.com/watch?v=yAfTH9w2-7I&si=li1QPUwi8NEFr6iP">,
-                <a href="https://youtube.com/watch?v=9PNSfbS9IoQ&si=BC2m5xu_DwdVIRJx">,
-                <a href="https://youtube.com/watch?v=2e7qdpJZpNw&si=JnkSTefeaUW9S0CS">,
-                <a href="https://youtube.com/watch?v=HBf8g747Tck&si=BVlGx_JLbHDw0eFc">,
-                <a href="https://youtube.com/watch?v=vCfdAEUByDo&si=8tL2zz1gxS0i-58y">,
-                <a href="https://youtube.com/watch?v=f6l-r6iyyyo&si=F13ggKTU5HOzqq8N">
-                
+                '<a href="https://youtu.be/5DC_1z-OGHo?si=f9lYVQAGqzNguaiS" target="_blank">추천 플레이리스트 보러가기 1</a>',
+                '<a href="https://youtu.be/YFkyI6wjr_A?si=8888bFu7_bVhKklh" target="_blank">추천 플레이리스트 보러가기 2</a>',
+                '<a href="https://youtu.be/OsA3iPO2fEg?si=_FqYzl0qVHYG6SOo" target="_blank">추천 플레이리스트 보러가기 3</a>',
+                '<a href="https://youtu.be/f1WuPpDA5fo?si=-Pf24c1jhFkeXb6c" target="_blank">추천 플레이리스트 보러가기 4</a>',
+                '<a href="https://youtu.be/WnrIX9Ak1wA?si=hJCC5qX-0E7B05sX" target="_blank">추천 플레이리스트 보러가기 5</a>',
+                '<a href="https://youtu.be/FhpEn4qkeMY?si=Qq457NlaqLwQ6B1s" target="_blank">추천 플레이리스트 보러가기 6</a>',
+                '<a href="https://youtu.be/CC78fJ9IBuU?si=LTTksLfALf1BhlbP" target="_blank">추천 플레이리스트 보러가기 7</a>',
+                '<a href="https://youtube.com/watch?v=pMDah67RpsQ&si=KIqu_VFpMmmG1t4Y" target="_blank">추천 플레이리스트 보러가기 8</a>',
+                '<a href="https://youtube.com/watch?v=Qx8Stqr9XZM&si=E4WrfoYP9P-DZVkX" target="_blank">추천 플레이리스트 보러가기 9</a>',
+                '<a href="https://youtube.com/watch?v=jyPb2zLiPyo&si=6TyCuT5nM_0ai7fW" target="_blank">추천 플레이리스트 보러가기 10</a>',
+                '<a href="https://youtube.com/watch?v=yAfTH9w2-7I&si=li1QPUwi8NEFr6iP" target="_blank">추천 플레이리스트 보러가기 11</a>',
+                '<a href="https://youtube.com/watch?v=9PNSfbS9IoQ&si=BC2m5xu_DwdVIRJx" target="_blank">추천 플레이리스트 보러가기 12</a>',
+                '<a href="https://youtube.com/watch?v=2e7qdpJZpNw&si=JnkSTefeaUW9S0CS" target="_blank">추천 플레이리스트 보러가기 13</a>',
+                '<a href="https://youtube.com/watch?v=HBf8g747Tck&si=BVlGx_JLbHDw0eFc" target="_blank">추천 플레이리스트 보러가기 14</a>',
+                '<a href="https://youtube.com/watch?v=vCfdAEUByDo&si=8tL2zz1gxS0i-58y" target="_blank">추천 플레이리스트 보러가기 15</a>',
+                '<a href="https://youtube.com/watch?v=f6l-r6iyyyo&si=F13ggKTU5HOzqq8N" target="_blank">추천 플레이리스트 보러가기 16</a>'
             ];
-            document.getElementById("message").innerText = messages[Math.floor(Math.random() * messages.length)];
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            document.getElementById("message").innerHTML = messages[randomIndex];
         }
     </script>
 </body>
