@@ -1,51 +1,75 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>오노추🎶</title>
-    <style>
-        body {
-            text-align: center;
-            font-size: 2rem;
-            margin-top: 20%;
-        }
-        a {
-            display: inline-block;
-            margin-top: 20px;
-            font-size: 1.5rem;
-            text-decoration: none;
-            color: #0077cc;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 🎶오노추 🎶</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 2rem;
+      margin-top: 5%;
+    }
+
+    .video-container {
+      width: 560px;
+      height: 315px;
+      margin-top: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .play-button {
+      margin-bottom: 10px;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .play-button:hover {
+      background-color: #000;
+    }
+  </style>
 </head>
 <body>
-    <p id="message">🎶 오늘의 플리 추천은? 🎶</p>
-    <button onclick="showRandomMessage()">눌러서 확인하기</button>
+  <p id="message">' 🎶 오플추 🎶</p>
 
-    <script>
-        function showRandomMessage() {
-            const messages = [
-                "<a href="https://youtu.be/5DC_1z-OGHo?si=f9lYVQAGqzNguaiS" target="_blank">추천 플레이리스트 보러가기 1</a>",
-                '<a href="https://youtu.be/YFkyI6wjr_A?si=8888bFu7_bVhKklh" target="_blank">추천 플레이리스트 보러가기 2</a>',
-                '<a href="https://youtu.be/OsA3iPO2fEg?si=_FqYzl0qVHYG6SOo" target="_blank">추천 플레이리스트 보러가기 3</a>',
-                '<a href="https://youtu.be/f1WuPpDA5fo?si=-Pf24c1jhFkeXb6c" target="_blank">추천 플레이리스트 보러가기 4</a>',
-                '<a href="https://youtu.be/WnrIX9Ak1wA?si=hJCC5qX-0E7B05sX" target="_blank">추천 플레이리스트 보러가기 5</a>',
-                '<a href="https://youtu.be/FhpEn4qkeMY?si=Qq457NlaqLwQ6B1s" target="_blank">추천 플레이리스트 보러가기 6</a>',
-                '<a href="https://youtu.be/CC78fJ9IBuU?si=LTTksLfALf1BhlbP" target="_blank">추천 플레이리스트 보러가기 7</a>',
-                '<a href="https://youtube.com/watch?v=pMDah67RpsQ&si=KIqu_VFpMmmG1t4Y" target="_blank">추천 플레이리스트 보러가기 8</a>',
-                '<a href="https://youtube.com/watch?v=Qx8Stqr9XZM&si=E4WrfoYP9P-DZVkX" target="_blank">추천 플레이리스트 보러가기 9</a>',
-                '<a href="https://youtube.com/watch?v=jyPb2zLiPyo&si=6TyCuT5nM_0ai7fW" target="_blank">추천 플레이리스트 보러가기 10</a>',
-                '<a href="https://youtube.com/watch?v=yAfTH9w2-7I&si=li1QPUwi8NEFr6iP" target="_blank">추천 플레이리스트 보러가기 11</a>',
-                '<a href="https://youtube.com/watch?v=9PNSfbS9IoQ&si=BC2m5xu_DwdVIRJx" target="_blank">추천 플레이리스트 보러가기 12</a>',
-                '<a href="https://youtube.com/watch?v=2e7qdpJZpNw&si=JnkSTefeaUW9S0CS" target="_blank">추천 플레이리스트 보러가기 13</a>',
-                '<a href="https://youtube.com/watch?v=HBf8g747Tck&si=BVlGx_JLbHDw0eFc" target="_blank">추천 플레이리스트 보러가기 14</a>',
-                '<a href="https://youtube.com/watch?v=vCfdAEUByDo&si=8tL2zz1gxS0i-58y" target="_blank">추천 플레이리스트 보러가기 15</a>',
-                '<a href="https://youtube.com/watch?v=f6l-r6iyyyo&si=F13ggKTU5HOzqq8N" target="_blank">추천 플레이리스트 보러가기 16</a>'
-            ];
-            const randomIndex = Math.floor(Math.random() * messages.length);
-            document.getElementById("message").innerHTML = messages[randomIndex];
-        }
-    </script>
+  <!-- 영상 위에 위치한 버튼 -->
+  <button class="play-button" onclick="playRandomVideo()">🎲 마법의 정우가 부르길</button>
+
+  <!-- 영상 -->
+  <div class="video-container">
+    <iframe id="videoFrame" src="" allowfullscreen></iframe>
+  </div>
+
+  <script>
+    const videoList = [
+      "https://youtu.be/5DC_1z-OGHo?si=f9lYVQAGqzNguaiS",
+      "https://youtu.be/YFkyI6wjr_A?si=8888bFu7_bVhKklh",
+      "https://youtu.be/OsA3iPO2fEg?si=_FqYzl0qVHYG6SOo",
+        "https://youtu.be/f1WuPpDA5fo?si=-Pf24c1jhFkeXb6c",
+        "https://youtu.be/WnrIX9Ak1wA?si=hJCC5qX-0E7B05sX",
+        "https://youtu.be/FhpEn4qkeMY?si=Qq457NlaqLwQ6B1s",
+        "https://youtu.be/CC78fJ9IBuU?si=LTTksLfALf1BhlbP",
+        "https://youtube.com/watch?v=pMDah67RpsQ&si=KIqu_VFpMmmG1t4Y",
+        "https://youtube.com/watch?v=Qx8Stqr9XZM&si=E4WrfoYP9P-DZVkX",
+        "https://youtube.com/watch?v=jyPb2zLiPyo&si=6TyCuT5nM_0ai7fW"
+    ];
+
+    function playRandomVideo() {
+      const randomIndex = Math.floor(Math.random() * videoList.length);
+      document.getElementById("videoFrame").src = videoList[randomIndex];
+    }
+  </script>
 </body>
 </html>
